@@ -25,7 +25,27 @@ Each evaluation directory contains:
 
 ## Usage Instructions
 
-<!-- Add your usage instructions here -->
+Uses the `bench` command from [openbench](https://github.com/groq/openbench):
+
+```bash
+bench eval ./gpqa --model groq/moonshotai/kimi-k2-instruct --limit 10
+bench eval ./simpleqa --model groq/moonshotai/kimi-k2-instruct --limit 10
+bench eval ./humaneval --model groq/moonshotai/kimi-k2-instruct --limit 10 --epochs 5
+```
+
+Use `uvx` to get `bench` without installing it:
+
+```
+uvx --from git+https://github.com/groq/openbench bench eval ./gpqa --model groq/moonshotai/kimi-k2-instruct --limit 10
+```
+
+Or install it:
+
+```bash
+uv venv
+source .venv/bin/activate
+uv pip install openbench
+```
 
 ## Features
 
